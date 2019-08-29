@@ -1,6 +1,5 @@
 package hard;
 
-import java.lang.reflect.Array;
 
 /**
  * @author bx
@@ -208,7 +207,7 @@ public class MedianOfTwoSortedArrays {
      * @param B array b
      * @return double
      */
-    public static double findMedianSortedArrays(int[] A, int[] B) {
+    private static double findMedianSortedArrays(int[] A, int[] B) {
         int m = A.length;
         int n = B.length;
         if (m > n) { // to ensure m<=n
@@ -228,7 +227,7 @@ public class MedianOfTwoSortedArrays {
             } else if (i > iMin && A[i - 1] > B[j]) {
                 iMax = i - 1; // i is too big
             } else { // i is perfect
-                int maxLeft = 0;
+                int maxLeft ;
                 if (i == 0) {
                     maxLeft = B[j - 1];
                 } else if (j == 0) {
@@ -240,7 +239,7 @@ public class MedianOfTwoSortedArrays {
                     return maxLeft;
                 }
 
-                int minRight = 0;
+                int minRight ;
                 if (i == m) {
                     minRight = B[j];
                 } else if (j == n) {
