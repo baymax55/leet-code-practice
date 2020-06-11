@@ -4,7 +4,7 @@ package medium;
  * @author bx
  * @date 2020/6/10 下午 5:41
  */
-public class StringToInteger {
+public class StringToInteger8 {
     public static int myAtoi(String str) {
         int sign = 1;//判断正负
         int ans = 0, pop = 0;
